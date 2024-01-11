@@ -16,6 +16,7 @@ For each of the commands `cd`, `ls`, and `cat`, and using the workspace you crea
 
 **Share an example of using the command with a path to a directory as an argument.**
 * `cd`: with a command w/ path to directory shows...
+
 * `ls`:
 * `cat`: 
 
