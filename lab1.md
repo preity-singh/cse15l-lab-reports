@@ -1,4 +1,4 @@
-For each of the commands `cd`, `ls`, and `cat`, and using the workspace you created in this lab:
+# For each of the commands `cd`, `ls`, and `cat`, and using the workspace you created in this lab:
 
 ## **Share an example of using the command with no arguments.**
 * `cd` with no argument goes to the home directory since that is the default. The output is not an error. This examples shows that the working directory was /lecture1 before the command.
