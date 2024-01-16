@@ -42,6 +42,7 @@
 * `ls` command with a file name as an argument prints the path to the file. Although the terminal doesn't output an error message, I am going to count this output as a type of error. The `ls` command lists all the files in a specified directory, so the terminal expects a directory as an argument instead of a specific file name. The initial working directory when I ran this program was the home directory.
 
 ![Image](FileLS.png)
+---
 
 * The `cat` command expects a file name as an argument, so the command line successfully printed the contents of the specified file name. In this example below, the working directory was the home directory and I wanted to see contents of the en-us.txt file under the messages directory. The terminal printed "Hello World!" 
 
