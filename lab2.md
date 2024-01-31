@@ -64,5 +64,6 @@
 
 # Part 3
 *In a couple of sentences, describe something you learned from lab in week 2 or 3 that you didn't know before.*
+
 * I honestly didn't know what servers were and how they worked. I liked the reference of how my individual computer is the client, while the computer in the basement that I am connected to is the server. A server is the central hub that helps connect devices and get what they want.
 * Before this lab I was unaware of the concept of SSH keys: the pair of keys intended to hold a secure and private connection between the client and the server. A key pair has a private key that is stored away from the public on the client, while the public key is shared with the server.
