@@ -55,7 +55,7 @@
 * How do the values of any relevant fields of the class change from this specific request? If no values got changed, explain why.
 
 # Part 2
-![Image](absolutepath-lab2.png)
+![Image](absolute path-lab2.png)
 ![Image](ls-lab2.png)
 * /home/linux/ieng6/oce/8o/prs009/.ssh/id_rsa. **--> private**
 * /home/linux/ieng6/oce/8o/prs009/.ssh/id_rsa.pub. **--> public**
