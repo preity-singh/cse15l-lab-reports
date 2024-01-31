@@ -53,14 +53,32 @@
     - The relevant fields of this class would be `str` which is the string of the chat message displayed the server.
 
 * How do the values of any relevant fields of the class change from this specific request? If no values got changed, explain why.
-    - url.getPath() --> evaluates `/add-message`
-    - url.getQuery() --> gets the query part of the url "s=Hello&user=jpolitz"
-    - line starting with String[] parameters --> splits the query like this `["s=Hello", "user=jpolitz"]`
+    - `url.getPath()` --> evaluates `/add-message`
+    - `url.getQuery()` --> gets the query part of the url `s=Hello&user=jpolitz`
+    - line starting with `String[] parameters` --> splits the query like this `["s=Hello", "user=jpolitz"]`
+    - `String[] messageParam` & `String[] userParam` --> splits each parameter even further
+    - inside the if statement that checks if the keys are correct, the new chat message gets appended to `str`
+        - value of `str` = "jpolitz: Hello"
 
 ![Image](secondImage-lab2.png)
 * Which methods in your code are called?
+    - `String handleRequest(URI url)` method in the `Handler` class gets called.
+    
 * What are the relevant arguments to those methods, and the values of any relevant fields of the class?
+    - The relevant argument would be `url` because it represents the URI of the request.
+    - The relevant fields of this class would be `str` which is the string of the chat message displayed the server.
+    
 * How do the values of any relevant fields of the class change from this specific request? If no values got changed, explain why.
+    - `url.getPath()` --> evaluates `/add-message`
+    - `url.getQuery()` --> gets the query part of the url `s=How are you&user=yash`
+    - line starting with `String[] parameters` --> splits the query like this `["s=How are you", "user=yash"]`
+    - `String[] messageParam` & `String[] userParam` --> splits each parameter even further
+    - the if statement that checks if the keys are correct, and since `str` is not empty, we add `\n` which creates a new line
+    - after the new chat message gets appended, the value of `str`:
+  ```
+  jpolitz: Hello
+  yash: How are you
+  ```
 
 # Part 2
 ![Image](absolutepath-lab2.png)
