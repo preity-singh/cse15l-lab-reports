@@ -46,7 +46,12 @@
 # Part 1
 ![Image](firstImage-lab2.png)
 * Which methods in your code are called?
+    - `String handleRequest(URI url)` method in the `Handler` class gets called.
+
 * What are the relevant arguments to those methods, and the values of any relevant fields of the class?
+    - The relevant argument would be `url` because it represents the URI of the request.
+    - The relevant fields of this class would be `str` which is the string of the chat message displayed the server.
+
 * How do the values of any relevant fields of the class change from this specific request? If no values got changed, explain why.
 
 ![Image](secondImage-lab2.png)
