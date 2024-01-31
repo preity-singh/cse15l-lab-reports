@@ -90,7 +90,9 @@
 * /home/linux/ieng6/oce/8o/prs009/.ssh/id_rsa. **--> private**
 * /home/linux/ieng6/oce/8o/prs009/.ssh/id_rsa.pub. **--> public**
 
-* **SPECIAL NOTE**: I tried multiple things, but the terminal in both VSCode and Edstem says that my password is incorrect, so permission is denied.
+----------
+![Image](loginWithoutPassword.png)
+* Screenshot of my terminal where I logged into my ieng6 account without being asked for a password.
 
 # Part 3
 *In a couple of sentences, describe something you learned from lab in week 2 or 3 that you didn't know before.*
