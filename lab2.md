@@ -58,8 +58,12 @@
     - line starting with `String[] parameters` --> splits the query like this `["s=Hello", "user=jpolitz"]`
     - `String[] messageParam` & `String[] userParam` --> splits each parameter even further
     - inside the if statement that checks if the keys are correct, the new chat message gets appended to `str`
-        - value of `str` = "jpolitz: Hello"
+        - value of `str`:
+    ```
+      jpolitz: Hello
+    ```
 
+-----------
 ![Image](secondImage-lab2.png)
 * Which methods in your code are called?
     - `String handleRequest(URI url)` method in the `Handler` class gets called.
