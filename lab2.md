@@ -55,7 +55,10 @@
 * How do the values of any relevant fields of the class change from this specific request? If no values got changed, explain why.
 
 # Part 2
-* /home/linux/ieng6/oce/8o/prs009/.ssh/id_rsa. --> private 
-* /home/linux/ieng6/oce/8o/prs009/.ssh/id_rsa.pub. --> public
+![Image](absolutepath-lab2.png)
+![Image](ls-lab2.png)
+* /home/linux/ieng6/oce/8o/prs009/.ssh/id_rsa. **--> private**
+* /home/linux/ieng6/oce/8o/prs009/.ssh/id_rsa.pub. **--> public**
 
 # Part 3
+*In a couple of sentences, describe something you learned from lab in week 2 or 3 that you didn't know before.*
