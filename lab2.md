@@ -53,6 +53,9 @@
     - The relevant fields of this class would be `str` which is the string of the chat message displayed the server.
 
 * How do the values of any relevant fields of the class change from this specific request? If no values got changed, explain why.
+    - url.getPath() --> evaluates `/add-message`
+    - url.getQuery() --> gets the query part of the url "s=Hello&user=jpolitz"
+    - line starting with String[] parameters --> splits the query like this `["s=Hello", "user=jpolitz"]`
 
 ![Image](secondImage-lab2.png)
 * Which methods in your code are called?
