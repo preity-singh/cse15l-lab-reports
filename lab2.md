@@ -1,7 +1,7 @@
 # Code for `ChatServer.java`
 
-import java.io.IOException;
-import java.net.URI;
+    import java.io.IOException;
+    import java.net.URI;
 
     class Handler implements URLHandler {
         // The one bit of state on the server: a number that will be manipulated by
@@ -42,6 +42,13 @@ import java.net.URI;
     }
 
 ------------
+
+# Part 1
+
+
+* Which methods in your code are called?
+* What are the relevant arguments to those methods, and the values of any relevant fields of the class?
+* How do the values of any relevant fields of the class change from this specific request? If no values got changed, explain why.
 
 # Part 2
 * /home/linux/ieng6/oce/8o/prs009/.ssh/id_rsa. --> private 
