@@ -11,6 +11,13 @@ static int[] reversed(int[] arr) {
 
 
 # An input that doesn't induce a failure, as a JUnit test and any associated code (write it as a code block in Markdown)
+```
+@Test
+  public void testReversed() {
+    int[] input1 = {0,0,0};
+    assertArrayEquals(new int[]{0,0,0}, ArrayExamples.reversed(input1));
+  }
+```
 
 
 # The symptom, as the output of running the tests (provide it as a screenshot of running JUnit with at least the two inputs above)
