@@ -84,6 +84,7 @@ static int[] reversed(int[] arr) {
 
 1.  `l` --> List the names of files that have at least one match of the specified pattern. This opition is helpful, especially when dealing with many files, because it quickly identifies the desired pattern across many files without overwhelming the user with alot of information like the specific lines in the file it matched with.  
 * command: `grep -l "Mesenchymal cells" biomed/*.txt`
+
   * output:
   ```
   biomed/1471-213X-1-11.txt
@@ -94,6 +95,7 @@ static int[] reversed(int[] arr) {
   * output: `plos/journal.pbio.0020010.txt`
 2. `n` --> Prints on the matched lines with their respective line numbers. This is helpful because it creates a quick reference point for the location of the pattern, which makes searching and potentially debugging more efficient.
 * command: `grep -n "Mesenchymal cells" biomed/*.txt`
+
   * output:
   ```
   biomed/1471-213X-1-11.txt:92:          Mesenchymal cells
@@ -102,6 +104,7 @@ static int[] reversed(int[] arr) {
   biomed/1477-7827-1-46.txt:559:          macrophages (see below). Mesenchymal cells in levator an
   ```
 * command: `grep -ni "cancer" biomed/*.txt` --> the `i` performs a case-insensitive search when looking for matched lines.  It is really easy to mix up case when trying to search for something, so this command is beneficial.
+
   * output:  
   ```
   biomed/1468-6708-3-1.txt:          of arthritis, cancer, diabetes, fair or poor self-rated
@@ -123,6 +126,7 @@ static int[] reversed(int[] arr) {
   ```
 3. `head` OR `tail` --> This option for the `grep` command limits the number of lines displayed in the output. `head` prints the first few lines, while `tail` displays the last few lines. This is useful when dealing with large outputs (perfect for this example), allowing someone to quickly preview the beginning or end of the results.
 * command: `grep -ni "cancer" biomed/*.txt | head`
+
     * output: the first 10 lines
     ```
     biomed/1468-6708-3-1.txt:133:          of arthritis, cancer, diabetes, fair or poor self-rated
@@ -137,6 +141,7 @@ static int[] reversed(int[] arr) {
     biomed/1471-2105-3-24.txt:47:        CGAP-GAI (Cancer Genome Anatomy Project Genetic Annotation
     ```
 * command: `grep "cancer" biomed/*.txt | tail -n 15` --> Adding `-n 15` to tail specifies that you want to display the last 15 lines of the output
+
   * output:
   ```
   biomed/gb-2003-4-7-r46.txt:          tumors. Other disease-related terms include 'Precancerous
