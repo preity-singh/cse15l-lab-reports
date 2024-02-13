@@ -86,10 +86,20 @@ static int[] reversed(int[] arr) {
 `grep`: searches a file for a specific pattern 
 * SYNTAX: `grep [options] pattern [files]`
 
+** file.txt **
+```
+Preity Singh is 19 years old on 2/13/24.
+Niki Singh is fourteen years old.
+```
 1. 
 * `grep "^[0-9]*$" file.txt`
   * searches for lines containing only numeric characters in `file.txt`
 * `grep "[A-Za-z]" file.txt`
   * searches for lines containing alphabetic characters
 2.
-* 
+* command: `grep -n "Preity" file.txt`
+  * output: `1:Preity Singh is 19 years old on 2/13/24.`
+* command: `grep -n "Singh" file.txt`
+  * output:
+  `1:Preity Singh is 19 years old on 2/13/24.
+  2:Niki Singh is fourteen years old.`
