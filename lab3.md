@@ -157,7 +157,7 @@ static int[] reversed(int[] arr) {
   ```
 
   ## Sources:
-  * [Link] (https://www.geeksforgeeks.org/grep-command-in-unixlinux/)
+  * [Link](https://www.geeksforgeeks.org/grep-command-in-unixlinux/)
     * for commands `l`, `n`, `i`
   * ChatGPT
     * for the `head` and `tail` options.
