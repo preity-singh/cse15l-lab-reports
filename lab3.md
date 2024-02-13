@@ -169,24 +169,21 @@ static int[] reversed(int[] arr) {
     bash
     Copy code
     head filename.txt
-    By default, head displays the first 10 lines. You can specify the number of lines using the -n option. For example, head -n 20   filename.txt will display the first 20 lines.
+    By default, head displays the first 10 lines. You can specify the number of lines using the -n option.
+    For example, head -n 20   filename.txt will display the first 20 lines.
+   ```
+   
+   `tail: This command is used to display the last few lines of a file.
     
-    tail: This command is used to display the last few lines of a file.
+   Example:
     
-    Example:
-    
-    bash
-    Copy code
-    tail filename.txt
-    By default, tail displays the last 10 lines. You can specify the number of lines using the -n option. For example, tail -n 20 filename.txt will display the last 20 lines.
-    
-    less: This command is a pager that allows you to view the contents of a file. It displays one screenful of text at a time and allows scrolling both forward and backward.
-    
-    Example:
-    
-    Copy code
-    less filename.txt
-    Once in the less pager, you can navigate to the beginning of the file by pressing g, or to the end by pressing G.
-    
-    These commands are handy for quickly viewing the contents of files, especially when dealing with large files.
-    ```
+   bash
+   Copy code
+   tail filename.txt
+   By default, tail displays the last 10 lines. You can specify the number of lines using the -n option.
+   For example, tail -n 20 filename.txt will display the last 20 lines.`
+   
+  
+  
+  
+  
