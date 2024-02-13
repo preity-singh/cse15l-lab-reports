@@ -1,4 +1,5 @@
-# A failure-inducing input for the buggy program, as a JUnit test and any associated code (write it as a code block in Markdown)
+# Part 1
+## A failure-inducing input for the buggy program, as a JUnit test and any associated code (write it as a code block in Markdown)
 ```
 @Test
   public void testReversed() {
@@ -8,7 +9,7 @@
 ```
 
 
-# An input that doesn't induce a failure, as a JUnit test and any associated code (write it as a code block in Markdown)
+## An input that doesn't induce a failure, as a JUnit test and any associated code (write it as a code block in Markdown)
 ```
 @Test
   public void testReversed() {
@@ -18,7 +19,7 @@
 ```
 
 
-# The symptom, as the output of running the tests (provide it as a screenshot of running JUnit with at least the two inputs above)
+## The symptom, as the output of running the tests (provide it as a screenshot of running JUnit with at least the two inputs above)
 *failutre-inducing input*
 ```
 JUnit version 4.13.2
@@ -53,7 +54,7 @@ OK (1 test)
 ```
 
 
-# The bug, as the before-and-after code change required to fix it (as two code blocks in Markdown)
+## The bug, as the before-and-after code change required to fix it (as two code blocks in Markdown)
 *Before*
 ```
 static int[] reversed(int[] arr) {
@@ -75,3 +76,11 @@ static int[] reversed(int[] arr) {
   }
 ```
 * Before, the code was assigning elements from the newly created array to the original array, not the other way around. The original method was not changing `newArray` and instead replacing every index in `arr` with a 0 and returning `arr` instead of `newArray`. 
+
+# Part 2
+* command
+* input
+* what it's doing and why it's useful
+* There should be two examples each for four different command-line options.
+
+`grep`
