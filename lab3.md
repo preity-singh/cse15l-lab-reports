@@ -74,3 +74,4 @@ static int[] reversed(int[] arr) {
     return newArray;
   }
 ```
+* Before, the code was assigning elements from the newly created array to the original array, not the other way around. The original method was not changing `newArray` and instead replacing every index in `arr` with a 0 and returning `arr` instead of `newArray`. 
