@@ -100,7 +100,8 @@ Niki Singh is fourteen years old.
 * command: `grep -n "Preity" file.txt`
   * output: `1:Preity Singh is 19 years old on 2/13/24.`
 * command: `grep -n "Singh" file.txt`
-  * output:
-  
-  `1:Preity Singh is 19 years old on 2/13/24.`
-  `2:Niki Singh is fourteen years old.`
+  * output:  
+  ```
+  1:Preity Singh is 19 years old on 2/13/24.
+  2:Niki Singh is fourteen years old.
+  ```
