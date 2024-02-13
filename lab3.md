@@ -162,6 +162,7 @@ static int[] reversed(int[] arr) {
   * ChatGPT
     * for the `head` and `tail` options.
     * I asked the AI, "what commands can we use in Linux to display the first/last few lines." This is the output that I received:
+  
     ```
     head: This command is used to display the first few lines of a file.
     Example: head filename.txt
@@ -174,8 +175,3 @@ static int[] reversed(int[] arr) {
     By default, tail displays the last 10 lines. You can specify the number of lines using the -n option.
     For example, tail -n 20     filename.txt will display the last 20 lines.
     ```
-   
-  
-  
-  
-  
