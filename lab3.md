@@ -78,46 +78,80 @@ static int[] reversed(int[] arr) {
 * Before, the code was assigning elements from the newly created array to the original array, not the other way around. The original method was not changing `newArray` and instead replacing every index in `arr` with a 0 and returning `arr` instead of `newArray`. 
 
 # Part 2
-* command
-* input
-* what it's doing and why it's useful
-* There should be two examples each for four different command-line options.
 
 `grep`: searches a file for a specific pattern 
 * SYNTAX: `grep [options] pattern [files]`
 
-** file.txt **
-```
-Preity Singh is 19 years old on 2/13/24.
-Niki Singh is Fourteen Years old.
-```
-1.  Demonstrates searching for specific character types (numeric and alphabetic) within a text file. By specifying a character class within square brackets, `grep` identifies lines with desired character type, providing flexibility in pattern matching.
-* command: `grep "[0-9]" file.txt` --> searches for lines containing only numeric characters in `file.txt`
-  * output: `Preity Singh is 19 years old on 2/13/24.`
-* command: `grep "[a-zA-Z]" file.txt` --> searches for lines containing alphabetic characters
+1.  `l` --> List the names of files that have at least one match of the specified pattern. This opition is helpful, especially when dealing with many files, because it quickly identifies the desired pattern across many files without overwhelming the user with alot of information like the specific lines in the file it matched with.  
+* command: `grep -l "Mesenchymal cells" biomed/*.txt`
   * output:
   ```
-  Preity Singh is 19 years old on 2/13/24.
-  Niki Singh is Fourteen Years old.
+  biomed/1471-213X-1-11.txt
+  biomed/1477-7827-1-36.txt
+  biomed/1477-7827-1-46.txt
   ```
+* command: `grep -l "JSTOR" plos/*.txt`
+  * output: `plos/journal.pbio.0020010.txt`
 2. `n` --> Prints on the matched lines with their respective line numbers. This is helpful because it creates a quick reference point for the location of the pattern, which makes searching and potentially debugging more efficient.
-* command: `grep -n "Preity" file.txt`
-  * output: `1:Preity Singh is 19 years old on 2/13/24.`
-* command: `grep -n "Singh" file.txt`
+* command: `grep -n "Mesenchymal cells" biomed/*.txt`
+  * output:
+  ```
+  biomed/1471-213X-1-11.txt:92:          Mesenchymal cells
+  biomed/1471-213X-1-11.txt:108:          Mesenchymal cells are present in the lamina propria
+  biomed/1477-7827-1-36.txt:388:          the ERβ antibody (right column). Mesenchymal cells
+  biomed/1477-7827-1-46.txt:559:          macrophages (see below). Mesenchymal cells in levator an
+  ```
+* command: `grep -ni "cancer" biomed/*.txt` --> the `i` performs a case-insensitive search when looking for matched lines.  It is really easy to mix up case when trying to search for something, so this command is beneficial.
   * output:  
   ```
-  1:Preity Singh is 19 years old on 2/13/24.
-  2:Niki Singh is fourteen years old.
+  biomed/1468-6708-3-1.txt:          of arthritis, cancer, diabetes, fair or poor self-rated
+  biomed/1468-6708-3-10.txt:          group were attributed to cancer, compared to 9% (6/70) in
+  biomed/1468-6708-3-4.txt:          cancer history. Since no missing data would occur, the
+  biomed/1471-2091-2-5.txt:        tumors taken from cancer patients [ 12]. In all of these
+  biomed/1471-2091-3-14.txt:          67 ] . ProTα was shown as a marker for breast cancer [ 68
+  biomed/1471-2091-3-14.txt:          prognosis of lung cancer [ 70 ] . In ligand blotting
+  biomed/1471-2091-3-4.txt:        patients suffering from cancer, cystic fibrosis, drug
+  biomed/1471-2105-3-24.txt:        cancer. For this to be the case, disease-associated amino
+  biomed/1471-2105-3-24.txt:        cancer susceptibility gene, BRCA1, showed that
+  biomed/1471-2105-3-24.txt:        website, http://cancer.stanford.edu/mut-paper/.
+  biomed/1471-2105-3-26.txt:        cancer therapy. Successful application of array-based tools
+  biomed/1471-2105-3-26.txt:        subsets of cancer [ 3 4 ] .
+  biomed/1471-2105-3-4.txt:        particularly on cancer, have appeared [ 14 15 16 17 18 19 ]
+  biomed/1471-2105-4-13.txt:        for the analysis of microarray data in cancer studies. We
+  biomed/1471-2105-4-13.txt:        numerous recent cancer studies, is an unsupervised mapping
+  .... many other lines that I can't paste here because it would be too much!
   ```
-3. `i` --> This option for the `grep` command is really useful because it performs a case-insensitive search when looking for matched lines. It is really easy to mix up case when trying to search for something, so this command is beneficial.
-* command: `grep -i "years" file.txt`
-    * output:
+3. `head` OR `tail` --> This option for the `grep` command limits the number of lines displayed in the output. `head` prints the first few lines, while `tail` displays the last few lines. This is useful when dealing with large outputs (perfect for this example), allowing someone to quickly preview the beginning or end of the results.
+* command: `grep -ni "cancer" biomed/*.txt | head`
+    * output: the first 10 lines
     ```
-    Preity Singh is 19 years old on 2/13/24.
-    Niki Singh is Fourteen Years old.
+    biomed/1468-6708-3-1.txt:133:          of arthritis, cancer, diabetes, fair or poor self-rated
+    biomed/1468-6708-3-10.txt:359:          group were attributed to cancer, compared to 9% (6/70) in
+    biomed/1468-6708-3-4.txt:308:          cancer history. Since no missing data would occur, the
+    biomed/1471-2091-2-5.txt:39:        tumors taken from cancer patients [ 12]. In all of these
+    biomed/1471-2091-3-14.txt:466:          67 ] . ProTα was shown as a marker for breast cancer [ 68
+    biomed/1471-2091-3-14.txt:470:          prognosis of lung cancer [ 70 ] . In ligand blotting
+    biomed/1471-2091-3-4.txt:71:        patients suffering from cancer, cystic fibrosis, drug
+    biomed/1471-2105-3-24.txt:9:        cancer. For this to be the case, disease-associated amino
+    biomed/1471-2105-3-24.txt:46:        20,000 entries) [ 2 ] and the National Cancer Institute's
+    biomed/1471-2105-3-24.txt:47:        CGAP-GAI (Cancer Genome Anatomy Project Genetic Annotation
     ```
-* command: `grep -ni "fourteen" file.txt`
+* command: `grep "cancer" biomed/*.txt | tail -n 15` --> Adding `-n 15` to tail specifies that you want to display the last 15 lines of the output
   * output:
   ```
-  2:Niki Singh is Fourteen Years old.
+  biomed/gb-2003-4-7-r46.txt:          tumors. Other disease-related terms include 'Precancerous
+  biomed/gb-2003-4-7-r46.txt:          to regulate self-renewal in stem cells and cancer cells,
+  biomed/gb-2003-4-7-r46.txt:          more in common from one cancer to the next, processes of
+  biomed/gb-2003-4-7-r46.txt:          placed in comparable tissue environments, cancer cells
+  biomed/gb-2003-4-7-r46.txt:        of host factors. The ability of cancer cells to proliferate
+  biomed/gb-2003-4-7-r46.txt:        of cancer [ 11 ] . To stimulate their own growth and
+  biomed/gb-2003-4-7-r46.txt:        In terms of new biological insight into cancer
+  biomed/gb-2003-4-7-r46.txt:        development, our findings suggest that cancer cells of
+  biomed/gb-2003-4-7-r46.txt:        cancer. This conclusion is based on the significant
+  biomed/gb-2003-4-7-r46.txt:        of cancer cells to the increased expression may be
+  biomed/gb-2003-4-7-r46.txt:        the cancerous cells in the tumor tissue. This conclusion is
+  biomed/gb-2003-4-7-r46.txt:        ECM signaling pathways are active in different cancers,
+  biomed/gb-2003-4-7-r46.txt:        the specific pathways dysregulated in a particular cancer
+  biomed/gb-2003-4-7-r46.txt:        cancers 
+  biomed/gb-2003-4-7-r46.txt:        cancers, including 
   ```
