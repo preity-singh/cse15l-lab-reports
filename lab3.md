@@ -89,14 +89,18 @@ static int[] reversed(int[] arr) {
 ** file.txt **
 ```
 Preity Singh is 19 years old on 2/13/24.
-Niki Singh is fourteen years old.
+Niki Singh is Fourteen Years old.
 ```
-1. 
-* `grep "^[0-9]*$" file.txt`
-  * searches for lines containing only numeric characters in `file.txt`
-* `grep "[A-Za-z]" file.txt`
-  * searches for lines containing alphabetic characters
-2.
+1.  Demonstrates searching for specific character types (numeric and alphabetic) within a text file. By specifying a character class within square brackets, `grep` identifies lines with desired character type, providing flexibility in pattern matching.
+* command: `grep "[0-9]" file.txt` --> searches for lines containing only numeric characters in `file.txt`
+  * output: `Preity Singh is 19 years old on 2/13/24.`
+* command: `grep "[a-zA-Z]" file.txt` --> searches for lines containing alphabetic characters
+  * output:
+  ```
+  Preity Singh is 19 years old on 2/13/24.
+  Niki Singh is Fourteen Years old.
+  ```
+2. `n` --> Prints on the matched lines with their respective line numbers. This is helpful because it creates a quick reference point for the location of the pattern, which makes searching and potentially debugging more efficient.
 * command: `grep -n "Preity" file.txt`
   * output: `1:Preity Singh is 19 years old on 2/13/24.`
 * command: `grep -n "Singh" file.txt`
@@ -104,4 +108,16 @@ Niki Singh is fourteen years old.
   ```
   1:Preity Singh is 19 years old on 2/13/24.
   2:Niki Singh is fourteen years old.
+  ```
+3. `i` --> This option for the `grep` command is really useful because it performs a case-insensitive search when looking for matched lines. It is really easy to mix up case when trying to search for something, so this command is beneficial.
+* command: `grep -i "years" file.txt`
+    * output:
+    ```
+    Preity Singh is 19 years old on 2/13/24.
+    Niki Singh is Fourteen Years old.
+    ```
+* command: `grep -ni "fourteen" file.txt`
+  * output:
+  ```
+  2:Niki Singh is Fourteen Years old.
   ```
