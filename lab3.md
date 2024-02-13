@@ -164,24 +164,16 @@ static int[] reversed(int[] arr) {
     * I asked the AI, "what commands can we use in Linux to display the first/last few lines." This is the output that I received:
     ```
     head: This command is used to display the first few lines of a file.
-    Example:
-    
-    bash
-    Copy code
-    head filename.txt
+    Example: head filename.txt
     By default, head displays the first 10 lines. You can specify the number of lines using the -n option.
     For example, head -n 20   filename.txt will display the first 20 lines.
-   ```
-   
-   `tail: This command is used to display the last few lines of a file.
-    
-   Example:
-    
-   bash
-   Copy code
-   tail filename.txt
-   By default, tail displays the last 10 lines. You can specify the number of lines using the -n option.
-   For example, tail -n 20 filename.txt will display the last 20 lines.`
+    ```
+    ```
+    tail: This command is used to display the last few lines of a file.
+    Example: tail filename.txt
+    By default, tail displays the last 10 lines. You can specify the number of lines using the -n option.
+    For example, tail -n 20     filename.txt will display the last 20 lines.
+    ```
    
   
   
