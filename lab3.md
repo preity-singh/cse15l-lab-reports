@@ -83,4 +83,13 @@ static int[] reversed(int[] arr) {
 * what it's doing and why it's useful
 * There should be two examples each for four different command-line options.
 
-`grep`
+`grep`: searches a file for a specific pattern 
+* SYNTAX: `grep [options] pattern [files]`
+
+1. 
+* `grep "^[0-9]*$" file.txt`
+  * searches for lines containing only numeric characters in `file.txt`
+* `grep "[A-Za-z]" file.txt`
+  * searches for lines containing alphabetic characters
+2.
+* 
