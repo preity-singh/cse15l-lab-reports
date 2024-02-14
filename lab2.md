@@ -44,7 +44,7 @@
 ------------
 
 # Part 1
-![Image](firstImage-lab2.png)
+![Image](RedoPic.png)
 * Which methods in your code are called?
     - `String handleRequest(URI url)` method in the `Handler` class gets called.
 
