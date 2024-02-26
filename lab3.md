@@ -84,7 +84,7 @@ static int[] reversed(int[] arr) {
 
 1.  `l` --> List the names of files that have at least one match of the specified pattern. This opition is helpful, especially when dealing with many files, because it quickly identifies the desired pattern across many files without overwhelming the user with alot of information like the specific lines in the file it matched with.
 
-* This command prints out the files in which the string "Mensenchymal cells" is mentioned in all `.txt` files in the `biomed` directory.
+* This command prints out the files in which the string "Mensenchymal cells" is mentioned in all `.txt` files in the `biomed` directory. This allows for efficient searching. 
   * command: `grep -l "Mesenchymal cells" biomed/*.txt`
   * output:
   ```
@@ -92,14 +92,15 @@ static int[] reversed(int[] arr) {
   biomed/1477-7827-1-36.txt
   biomed/1477-7827-1-46.txt
   ```
-* command: `grep -l "JSTOR" plos/*.txt`
-* This command line searches for the string "JSTOR" within all .txt files in the plos directory and prints the file name(s) where the string is mentioned.
+* This command line searches for the string "JSTOR" within all `.txt` files in the `plos` directory and prints the file name(s) where the string is mentioned. Like the example above, this command allows for efficient searching, especially when dealing with a large number of files.
+  * command: `grep -l "JSTOR" plos/*.txt`
   * output: `plos/journal.pbio.0020010.txt`
 
   
 2. `n` --> Prints on the matched lines with their respective line numbers. This is helpful because it creates a quick reference point for the location of the pattern, which makes searching and potentially debugging more efficient.
-* command: `grep -n "Mesenchymal cells" biomed/*.txt`
 
+* This command searches for and prints out all the file names where the string "Mensenchymal cells" is found and will additionally output the line number within the file where the string is exactly found. This is one step more effiencet than `-l` since it gives more direction to where the key string is located. 
+  * command: `grep -n "Mesenchymal cells" biomed/*.txt`
   * output:
   ```
   biomed/1471-213X-1-11.txt:92:          Mesenchymal cells
@@ -107,30 +108,31 @@ static int[] reversed(int[] arr) {
   biomed/1477-7827-1-36.txt:388:          the ERβ antibody (right column). Mesenchymal cells
   biomed/1477-7827-1-46.txt:559:          macrophages (see below). Mesenchymal cells in levator an
   ```
-* command: `grep -ni "cancer" biomed/*.txt` --> the `i` performs a case-insensitive search when looking for matched lines.  It is really easy to mix up case when trying to search for something, so this command is beneficial.
-
+* This command searches for and prints out all the file names and the specific lines where the string "cancer" is mentioned in the `biomed` directory. The `i` performs a case-insensitive search when looking for matched lines.  It is really easy to mix up case when trying to search for something, so this command is beneficial. The output could include lines that have a variation of the word "cancer" including "Cancer" (with a capital C).
+  * command: `grep -ni "cancer" biomed/*.txt`
   * output:  
   ```
-  biomed/1468-6708-3-1.txt:          of arthritis, cancer, diabetes, fair or poor self-rated
-  biomed/1468-6708-3-10.txt:          group were attributed to cancer, compared to 9% (6/70) in
-  biomed/1468-6708-3-4.txt:          cancer history. Since no missing data would occur, the
-  biomed/1471-2091-2-5.txt:        tumors taken from cancer patients [ 12]. In all of these
-  biomed/1471-2091-3-14.txt:          67 ] . ProTα was shown as a marker for breast cancer [ 68
-  biomed/1471-2091-3-14.txt:          prognosis of lung cancer [ 70 ] . In ligand blotting
-  biomed/1471-2091-3-4.txt:        patients suffering from cancer, cystic fibrosis, drug
-  biomed/1471-2105-3-24.txt:        cancer. For this to be the case, disease-associated amino
-  biomed/1471-2105-3-24.txt:        cancer susceptibility gene, BRCA1, showed that
-  biomed/1471-2105-3-24.txt:        website, http://cancer.stanford.edu/mut-paper/.
-  biomed/1471-2105-3-26.txt:        cancer therapy. Successful application of array-based tools
-  biomed/1471-2105-3-26.txt:        subsets of cancer [ 3 4 ] .
-  biomed/1471-2105-3-4.txt:        particularly on cancer, have appeared [ 14 15 16 17 18 19 ]
-  biomed/1471-2105-4-13.txt:        for the analysis of microarray data in cancer studies. We
-  biomed/1471-2105-4-13.txt:        numerous recent cancer studies, is an unsupervised mapping
+  biomed/1468-6708-3-1.txt:133:          of arthritis, cancer, diabetes, fair or poor self-rated
+  biomed/1468-6708-3-10.txt:359:          group were attributed to cancer, compared to 9% (6/70) in
+  biomed/1468-6708-3-4.txt:308:          cancer history. Since no missing data would occur, the
+  biomed/1471-2091-2-5.txt:39:        tumors taken from cancer patients [ 12]. In all of these
+  biomed/1471-2091-3-14.txt:466:          67 ] . ProTα was shown as a marker for breast cancer [ 68
+  biomed/1471-2091-3-14.txt:470:          prognosis of lung cancer [ 70 ] . In ligand blotting
+  biomed/1471-2091-3-4.txt:71:        patients suffering from cancer, cystic fibrosis, drug
+  biomed/1471-2105-3-24.txt:9:        cancer. For this to be the case, disease-associated amino
+  biomed/1471-2105-3-24.txt:46:        20,000 entries) [ 2 ] and the National Cancer Institute's
+  biomed/1471-2105-3-24.txt:47:        CGAP-GAI (Cancer Genome Anatomy Project Genetic Annotation
+  biomed/1471-2105-3-24.txt:78:        cancer susceptibility gene, BRCA1, showed that
+  biomed/1471-2105-3-24.txt:154:        website, http://cancer.stanford.edu/mut-paper/.
+  biomed/1471-2105-3-26.txt:23:        cancer therapy. Successful application of array-based tools
+  biomed/1471-2105-3-26.txt:28:        subsets of cancer [ 3 4 ] .
+  biomed/1471-2105-3-4.txt:33:        particularly on cancer, have appeared [ 14 15 16 17 18 19 ]
   .... many other lines that I can't paste here because it would be too much!
   ```
 3. `head` OR `tail` --> This option for the `grep` command limits the number of lines displayed in the output. `head` prints the first few lines, while `tail` displays the last few lines. This is useful when dealing with large outputs (perfect for this example), allowing someone to quickly preview the beginning or end of the results.
-* command: `grep -ni "cancer" biomed/*.txt | head`
 
+* This command searches for the string "cancer" case-insensitively (`-i` option) in all `.txt` files within the `biomed` directory and outputs the line number where it is referenced (`-n` option). The pipe symbol (`|`) redirects the output of one command as the input of another command. The `head` keyword is used to display the first 10 lines of the output by default. Adding the `head` keyword helps with making a quick assessment of where the string "cancer" is used. If the output size is large, this keyword helps with efficently analyzing some inital matches without getting overwhelmed.
+  * command: `grep -ni "cancer" biomed/*.txt | head`
     * output: the first 10 lines
     ```
     biomed/1468-6708-3-1.txt:133:          of arthritis, cancer, diabetes, fair or poor self-rated
@@ -144,8 +146,8 @@ static int[] reversed(int[] arr) {
     biomed/1471-2105-3-24.txt:46:        20,000 entries) [ 2 ] and the National Cancer Institute's
     biomed/1471-2105-3-24.txt:47:        CGAP-GAI (Cancer Genome Anatomy Project Genetic Annotation
     ```
-* command: `grep "cancer" biomed/*.txt | tail -n 15` --> Adding `-n 15` to tail specifies that you want to display the last 15 lines of the output
-
+* This command searching for the string "cancer" in all `.txt` files within the `biomed` directory. The command will only output the last 15 lines because the keyword `tail` allows the user to see the tail end of the output. Adding `-n 15` to tail specifies that you want to display the last 15 lines of the output. This command allows for more control over the size of your output and making searching more efficient and less overwhelming.
+  * command: `grep "cancer" biomed/*.txt | tail -n 15`
   * output:
   ```
   biomed/gb-2003-4-7-r46.txt:          tumors. Other disease-related terms include 'Precancerous
