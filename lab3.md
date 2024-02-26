@@ -168,6 +168,7 @@ static int[] reversed(int[] arr) {
   biomed/gb-2003-4-7-r46.txt:        cancers 
   biomed/gb-2003-4-7-r46.txt:        cancers, including 
   ```
+
 ### 4. `-c` --> This option when using the `grep` command stands for count. It only displays the count of lines that match the specified pattern instead of showing the pattern in the line itself. This command is able to give someone a quick summary of the number of times a pattern is referenced and can help with quantitative anaylsis. 
 
 * This command displays the number of times that the word "cancer" is in all the `.txt` files in the `plos` directory. Because of the large output size, I decided for the command to only display the head.
