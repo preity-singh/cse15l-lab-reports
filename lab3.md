@@ -168,7 +168,39 @@ static int[] reversed(int[] arr) {
   biomed/gb-2003-4-7-r46.txt:        cancers 
   biomed/gb-2003-4-7-r46.txt:        cancers, including 
   ```
-### 4. 
+### 4. `-c` --> This option when using the `grep` command stands for count. It only displays the count of lines that match the specified pattern instead of showing the pattern in the line itself. This command is able to give someone a quick summary of the number of times a pattern is referenced and can help with quantitative anaylsis. 
+
+* This command displays the number of times that the word "cancer" is in all the `.txt` files in the `plos` directory. Because of the large output size, I decided for the command to only display the head.
+  * command: `preitysingh$ grep -c "cancer" plos/*.txt | head`
+  * output:
+  ```
+  plos/journal.pbio.0020001.txt:0
+  plos/journal.pbio.0020010.txt:0
+  plos/journal.pbio.0020012.txt:0
+  plos/journal.pbio.0020013.txt:1
+  plos/journal.pbio.0020019.txt:0
+  plos/journal.pbio.0020028.txt:5
+  plos/journal.pbio.0020035.txt:2
+  plos/journal.pbio.0020040.txt:9
+  plos/journal.pbio.0020042.txt:0
+  plos/journal.pbio.0020043.txt:0
+  ```
+
+* This command searches for the string "cancer" in all `.txt` files within the `plos` directory. It counts the number of lines in each file that do not contain the string "cancer" using the `-vc` options. `-v` inverts the match and counts non-matching lines, while `-c` displays the count of these lines. This command allows you to quickly identify files within the `plos` directory that do not contain the pattern "cancer". 
+  * command: `preitysingh$ grep -vc "cancer" plos/*.txt | head`
+  * output:
+  ```
+  plos/journal.pbio.0020001.txt:231
+  plos/journal.pbio.0020010.txt:84
+  plos/journal.pbio.0020012.txt:225
+  plos/journal.pbio.0020013.txt:140
+  plos/journal.pbio.0020019.txt:155
+  plos/journal.pbio.0020028.txt:194
+  plos/journal.pbio.0020035.txt:170
+  plos/journal.pbio.0020040.txt:97
+  plos/journal.pbio.0020042.txt:131
+  plos/journal.pbio.0020043.txt:244
+  ```
 ---
   ## Sources: 
   * [GeeksForGeeks](https://www.geeksforgeeks.org/grep-command-in-unixlinux/)
