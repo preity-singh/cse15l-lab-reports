@@ -82,9 +82,10 @@ static int[] reversed(int[] arr) {
 `grep`: searches a file for a specific pattern 
 * SYNTAX: `grep [options] pattern [files]`
 
-1.  `l` --> List the names of files that have at least one match of the specified pattern. This opition is helpful, especially when dealing with many files, because it quickly identifies the desired pattern across many files without overwhelming the user with alot of information like the specific lines in the file it matched with.  
-* command: `grep -l "Mesenchymal cells" biomed/*.txt`
+1.  `l` --> List the names of files that have at least one match of the specified pattern. This opition is helpful, especially when dealing with many files, because it quickly identifies the desired pattern across many files without overwhelming the user with alot of information like the specific lines in the file it matched with.
+
 * This command prints out the files in which the string "Mensenchymal cells" is mentioned in all `.txt` files in the `biomed` directory.
+  * command: `grep -l "Mesenchymal cells" biomed/*.txt`
   * output:
   ```
   biomed/1471-213X-1-11.txt
