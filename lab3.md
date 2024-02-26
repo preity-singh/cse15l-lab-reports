@@ -96,8 +96,7 @@ static int[] reversed(int[] arr) {
   * command: `grep -l "JSTOR" plos/*.txt`
   * output: `plos/journal.pbio.0020010.txt`
 
-  
-2. `n` --> Prints on the matched lines with their respective line numbers. This is helpful because it creates a quick reference point for the location of the pattern, which makes searching and potentially debugging more efficient.
+2.  `n` --> Prints on the matched lines with their respective line numbers. This is helpful because it creates a quick reference point for the location of the pattern, which makes searching and potentially debugging more efficient.
 
 * This command searches for and prints out all the file names where the string "Mensenchymal cells" is found and will additionally output the line number within the file where the string is exactly found. This is one step more effiencet than `-l` since it gives more direction to where the key string is located. 
   * command: `grep -n "Mesenchymal cells" biomed/*.txt`
@@ -129,6 +128,7 @@ static int[] reversed(int[] arr) {
   biomed/1471-2105-3-4.txt:33:        particularly on cancer, have appeared [ 14 15 16 17 18 19 ]
   .... many other lines that I can't paste here because it would be too much!
   ```
+
 3. `head` OR `tail` --> This option for the `grep` command limits the number of lines displayed in the output. `head` prints the first few lines, while `tail` displays the last few lines. This is useful when dealing with large outputs (perfect for this example), allowing someone to quickly preview the beginning or end of the results.
 
 * This command searches for the string "cancer" case-insensitively (`-i` option) in all `.txt` files within the `biomed` directory and outputs the line number where it is referenced (`-n` option). The pipe symbol (`|`) redirects the output of one command as the input of another command. The `head` keyword is used to display the first 10 lines of the output by default. Adding the `head` keyword helps with making a quick assessment of where the string "cancer" is used. If the output size is large, this keyword helps with efficently analyzing some inital matches without getting overwhelmed.
