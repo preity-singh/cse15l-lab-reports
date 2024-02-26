@@ -12,7 +12,7 @@
 ## An input that doesn't induce a failure, as a JUnit test and any associated code (write it as a code block in Markdown)
 ```
 @Test
-  public void testReversed() {
+  public void testReversed2() {
     int[] input1 = {0,0,0};
     assertArrayEquals(new int[]{0,0,0}, ArrayExamples.reversed(input1));
   }
@@ -84,7 +84,6 @@ static int[] reversed(int[] arr) {
 
 1.  `l` --> List the names of files that have at least one match of the specified pattern. This opition is helpful, especially when dealing with many files, because it quickly identifies the desired pattern across many files without overwhelming the user with alot of information like the specific lines in the file it matched with.  
 * command: `grep -l "Mesenchymal cells" biomed/*.txt`
-
   * output:
   ```
   biomed/1471-213X-1-11.txt
@@ -93,6 +92,8 @@ static int[] reversed(int[] arr) {
   ```
 * command: `grep -l "JSTOR" plos/*.txt`
   * output: `plos/journal.pbio.0020010.txt`
+
+  
 2. `n` --> Prints on the matched lines with their respective line numbers. This is helpful because it creates a quick reference point for the location of the pattern, which makes searching and potentially debugging more efficient.
 * command: `grep -n "Mesenchymal cells" biomed/*.txt`
 
