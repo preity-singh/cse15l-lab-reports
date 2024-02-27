@@ -30,3 +30,4 @@ git clone <command-V> <enter>
 ![Image](testRun.png)
 
 ### 9: Commit and push the resulting change to your Github account (you can pick any commit message!)
+* `git commit`
