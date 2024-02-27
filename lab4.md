@@ -18,16 +18,21 @@ git clone <command-V> <enter>
 
 ### 6: Run the tests, demonstrating that they fail
 * `bash test.sh <enter>`
+
 ![Image](preFixTest.png)
 
 ### 7: Edit the code file to fix the failing test
 * `vim ListExamples.java <enter>`
 * `44G-e-x-i2-<esc>-:wq-<enter>`
+
 ![Image](fixTest.png)
 
 ### 8: Run the tests, demonstrating that they now succeed
 * `<up><up><enter>`
+
 ![Image](testRun.png)
 
 ### 9: Commit and push the resulting change to your Github account (you can pick any commit message!)
-* `git commit`
+* `git add List<tab><enter>
+* `git commit -m "lab 4 report commit"<enter>`
+* `git push origin main<enter>`
