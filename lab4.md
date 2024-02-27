@@ -8,7 +8,7 @@ STEPS 4-9:
 ### 4: Log into ieng6
 * `ssh prs009@ieng6.ucsd.edu`
 * entered password
-*add picture*
+![Image](loginIeng6.png)
 
 ### 5: Clone your fork of the repository from your Github account (using the SSH URL)
 * My terminal didn't save for this part, so I couldn't take a screenshot but I have the block code.
@@ -18,11 +18,11 @@ git clone git@github.com:preity-singh/lab7.git
 
 ### 6: Run the tests, demonstrating that they fail
 * `bash test.sh`
-*add picture*
+![Image](preFixTest.png)
 
 ### 7: Edit the code file to fix the failing test
 * (started at the end of the file) 6`k`-11`l`-`x`-`i`-(insert 2)-<escape>(returns to normal mode)-`:wq` (to save the quit)-<enter>
-*add picture*
+![Image](fixTest.png)
 
 ### 8: Run the tests, demonstrating that they now succeed
 **NOT WORKING**
