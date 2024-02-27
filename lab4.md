@@ -5,6 +5,7 @@
 ### 4: Log into ieng6
 `ssh prs009@ieng6.ucsd.edu<enter>`
 * entered password
+
 ![Image](loginIeng6.png)
 
 ### 5: Clone your fork of the repository from your Github account (using the SSH URL)
