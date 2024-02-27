@@ -6,24 +6,24 @@ Keys pressed: <up><up><up><up><enter>, <up><up><up><up><enter> The javac -cp .:l
 
 STEPS 4-9:
 ### 4: Log into ieng6
-* `ssh prs009@ieng6.ucsd.edu <enter>`
+* `ssh prs009@ieng6.ucsd.edu<enter>`
 * entered password
 ![Image](loginIeng6.png)
 
 ### 5: Clone your fork of the repository from your Github account (using the SSH URL)
 * My terminal didn't save for this part, so I couldn't take a screenshot but I have the block code. Also, for reference, I copied my ssh url from GitHub.
 ```
-git clone <command-V> <enter>
+git clone<Command-V><enter>
 ```
 
 ### 6: Run the tests, demonstrating that they fail
-* `bash test.sh <enter>`
+* `bash test.sh<enter>`
 
 ![Image](preFixTest.png)
 
 ### 7: Edit the code file to fix the failing test
-* `vim ListExamples.java <enter>`
-* `44G-e-x-i2-<esc>-:wq-<enter>`
+* `vim ListExamples.java<enter>`
+* `44Gexi2<esc>:wq<enter>`
 
 ![Image](fixTest.png)
 
