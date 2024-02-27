@@ -33,6 +33,6 @@ git clone <command-V> <enter>
 ![Image](testRun.png)
 
 ### 9: Commit and push the resulting change to your Github account (you can pick any commit message!)
-* `git add List<tab><enter>
+* `git add List<tab><enter>`
 * `git commit -m "lab 4 report commit"<enter>`
 * `git push origin main<enter>`
