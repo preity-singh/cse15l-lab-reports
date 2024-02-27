@@ -36,3 +36,5 @@ git clone <command-V> <enter>
 * `git add List<tab><enter>`
 * `git commit -m "lab 4 report commit"<enter>`
 * `git push origin main<enter>`
+
+![Image](gitPushCommit.png)
