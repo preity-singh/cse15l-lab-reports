@@ -14,20 +14,20 @@ Then, I entered my password and was logged in.
 My terminal didn't save for this part, and I had to relogin to ieng6, so I couldn't take a screenshot but I have the block code.
 
 `git clone<Command-V><enter>`
-* `git clone` - Copies remote repository from GitHub into my local machine.
-* `<Command-V>` - I copied my SSH URL from my GitHub account
+* `git clone` - Copies remote repository from GitHub into my local machine so I can access all the files and make edits.
+* `<Command-V>` - I copied my SSH URL from my GitHub account.
 
 ### 6: Run the tests, demonstrating that they fail
 `bash test.sh<enter>`
-* `bash` - executes the Bash shell
-* `test.sh` - tester file to run the tests/execute 
+* `bash` - executes the Bash shell and allows me to execute shell scripts directly from the command line.
+* `test.sh` - script contain commands for testing and allows me to test `ListExamples.java`
 
 ![Image](preFixTest.png)
 
 ### 7: Edit the code file to fix the failing test
 `vim ListExamples.java<enter>`
-* `vim` command to launch the Vim editor.
-* `ListExamples.java` name of the file you want to open in Vim
+* `vim` command to launch the Vim editor. Allows me to efficiently edit any files.
+* `ListExamples.java` name of the file I want to open in Vim. 
 
 `44Gexi2<esc>:wq<enter>`
 * `44G` - `44` refers to the line number while the `G` command moves the cursor to the specific line.
