@@ -4,7 +4,9 @@
 
 ### 4: Log into ieng6
 `ssh prs009@ieng6.ucsd.edu<enter>`
-* entered password
+* `ssh` - stands for "Secure Shell." Is a protocol for securely connecting to remote Git repositories. It allows me to securely authenticate and interact with the remote repository.
+
+Then, I entered my password and was logged in. 
 
 ![Image](loginIeng6.png)
 
