@@ -14,4 +14,4 @@ You should actually set up and run the scenario from your screenshots. It should
 # Part 2 – Reflection
 In a couple of sentences, describe something you learned from your lab experience in the second half of this quarter that you didn't know before. It could be a technical topic we addressed specifically, something cool you found out on your own building on labs, something you learned from a tutor or classmate, and so on. It doesn't have to be specifically related to a lab writeup, we just want to hear about cool things you learned!
 
-* 
+* This course was entirely unique to me. 
