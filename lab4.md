@@ -22,6 +22,7 @@ My terminal didn't save for this part, and I had to relogin to ieng6, so I could
 ### 6: Run the tests, demonstrating that they fail
 `cd<space>l<tab><enter>`
 * cd into the lab7 directory
+
 `bash<space>test.sh<enter>`
 * `bash` - executes the Bash shell and allows me to execute shell scripts directly from the command line.
 * `test.sh` - script contain commands for testing and allows me to test `ListExamples.java`
