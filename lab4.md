@@ -17,6 +17,8 @@ My terminal didn't save for this part, and I had to relogin to ieng6, so I could
 * `git clone` - Copies remote repository from GitHub into my local machine so I can access all the files and make edits.
 * `<Command-V>` - I copied my SSH URL from my GitHub account.
 
+![Image](gitClone.png)
+
 ### 6: Run the tests, demonstrating that they fail
 `bash<space>test.sh<enter>`
 * `bash` - executes the Bash shell and allows me to execute shell scripts directly from the command line.
