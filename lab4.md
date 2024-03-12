@@ -43,6 +43,7 @@ My terminal didn't save for this part, and I had to relogin to ieng6, so I could
 * `<esc>` - exists insert mode and goes back to normal mode
 * `:wq` - `w` saves the changes made and `q` quits Vim
 
+![Image](vimListExamples.png)
 ![Image](fixTest.png)
 
 ### 8: Run the tests, demonstrating that they now succeed
