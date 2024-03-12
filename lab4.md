@@ -8,7 +8,7 @@
 
 Then, I entered my password and was logged in. 
 
-![Image](loginIeng6.png)
+![Image](login.png)
 
 ### 5: Clone your fork of the repository from your Github account (using the SSH URL)
 My terminal didn't save for this part, and I had to relogin to ieng6, so I couldn't take a screenshot but I have the block code.
