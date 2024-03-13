@@ -101,11 +101,16 @@ public class TestListExamples {
 
 * The full command line (or lines) you ran to trigger the bug
   * `bash grade.sh https://github.com/ucsd-cse15l-f22/list-methods-corrected`
+  * The terminal output of this command line is pasted above in the "student" post. Below is the terminal output after the bug was fixed.
+ ![Image](gotIt.png)
 
 * A description of what to edit to fix the bug
-  * There aren't supposed to be any failures and the "student" is supposed to
-  receive an 100% in this test I made. This means that there were no failure
-  messages that were added to $failures. This is an edge case the student needed to consider.
+  * There aren't supposed to be any failures. The terminal is supposed to output a
+  100% or 0 bugs message after running the test I wrote in `TestListExamples.java`.
+  This means that there were no failure messages that were added to `$failures`.
+  However, this edge case was not considered the since there was nothing added to
+  `$failures`, and `$successes` and `$tests` weren't updated, the `echo` command only printed
+  the "skeleton" of the output message.
 
 # Part 2 – Reflection
 
