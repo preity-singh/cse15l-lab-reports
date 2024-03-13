@@ -1,6 +1,4 @@
 # Part 1 - Debugging Scenario
-Design a debugging scenario, and write your report as a conversation on EdStem. It should have:
-
 ```
 Student: Hello! I am working on my Grade Server and am trying to run the grade.sh file.
 I will copy the terminal results I am getting, but it seems to output a skeleton
@@ -13,7 +11,7 @@ statement in my grade.sh file.
 TA: Hi. Yes you are correct with your guess, you might want to consider the case
 when $failures is empty. (Hint! What can an if-else statement do?)
 ```
-
+* What the student added to their `grade.sh` to take care of the edge case.
 ![Image](edit.png)
 
 * The file & directory structure needed
