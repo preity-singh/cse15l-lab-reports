@@ -18,7 +18,7 @@ when $failures is empty. (Hint! What can an if-else statement do?)
   * `List-examples-grader` directory
    * Main files talked about for this example include: `grade.sh` & `TestListExamples.java`
 
-* The contents of each file before fixing the bug
+* The contents of each file **before** fixing the bug
 ### grade.sh
 ```
 CPATH='.:.:../lib/hamcrest-core-1.3.jar:../lib/junit-4.13.2.jar'
@@ -58,6 +58,8 @@ java -cp $CPATH org.junit.runner.JUnitCore TestListExamples > junit-output.txt
 lastline=$(cat junit-output.txt | tail -n 2 | head -n 1)
 tests=$(echo $lastline | awk -F'[, ]' '{print $3}')
 failures=$(echo $lastline | awk -F'[, ]' '{print $6}')
+
+#The edits the student made were written here! (see screenshot above)
 ```
 ### TestListExamples.java
 ```
