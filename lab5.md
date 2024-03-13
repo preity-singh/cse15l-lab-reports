@@ -59,7 +59,7 @@ lastline=$(cat junit-output.txt | tail -n 2 | head -n 1)
 tests=$(echo $lastline | awk -F'[, ]' '{print $3}')
 failures=$(echo $lastline | awk -F'[, ]' '{print $6}')
 
-#The edits the student made were written here! (see screenshot above)
+# The edits the student made were written here! (see screenshot above)
 ```
 ### TestListExamples.java
 ```
