@@ -1,16 +1,19 @@
 # Part 1 - Debugging Scenario
+
 ```
 Student: Hello! I am working on my Grade Server and am trying to run the grade.sh file.
 I will copy the terminal results I am getting, but it seems to output a skeleton
 version of the correct response. I wonder if I have correctly written the print
 statement in my grade.sh file.
 ```
+
 ![Image](help.png)
 
 ```
 TA: Hi. Yes you are correct with your guess, you might want to consider the case
 when $failures is empty. (Hint! What can an if-else statement do?)
 ```
+
 * What the student added to their `grade.sh` to take care of the edge case.
 ![Image](edit.png)
 
@@ -20,6 +23,7 @@ when $failures is empty. (Hint! What can an if-else statement do?)
 
 * The contents of each file **before** fixing the bug
 ### grade.sh
+
 ```
 CPATH='.:.:../lib/hamcrest-core-1.3.jar:../lib/junit-4.13.2.jar'
 
@@ -61,7 +65,9 @@ failures=$(echo $lastline | awk -F'[, ]' '{print $6}')
 
 # The edits the student made were written here! (see screenshot above)
 ```
+
 ### TestListExamples.java
+
 ```
 import static org.junit.Assert.*;
 import org.junit.*;
