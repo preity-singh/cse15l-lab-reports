@@ -14,10 +14,11 @@ TA: Hi. Yes you are correct with your guess, you might want to consider the case
 when $failures is empty. (Hint! What can an if-else statement do?)
 ```
 
-![Image](edits.png)
+![Image](edit.png)
 
 * The file & directory structure needed
-  * List-examples-grader directory
+  * `List-examples-grader` directory
+   * Main files talked about for this example include: `grade.sh` & `TestListExamples.java`
 
 * The contents of each file before fixing the bug
 ### grade.sh
